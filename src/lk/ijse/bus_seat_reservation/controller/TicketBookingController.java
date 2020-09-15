@@ -97,15 +97,6 @@ public class TicketBookingController {
     }
 
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     public List<BusSchedule> getAllSelectedBusSchedule(String from, String to) throws ClassNotFoundException, SQLException {
         Connection connection = DBConnection.getInstance().getConnection();
         ResultSet set = connection.prepareStatement("SELECT * FROM bus_shedule WHERE depature_place='"+from+"' AND arrival_place='"+to+"'").executeQuery();
